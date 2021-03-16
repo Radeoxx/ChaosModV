@@ -185,7 +185,7 @@ void Main::MainLoop()
 		if (m_clearEffectsTextTime > 0)
 		{
 			BEGIN_TEXT_COMMAND_DISPLAY_TEXT("STRING");
-			ADD_TEXT_COMPONENT_SUBSTRING_PLAYER_NAME("Effects Cleared!");
+			ADD_TEXT_COMPONENT_SUBSTRING_PLAYER_NAME("Efectos Limpiados!");
 			SET_TEXT_SCALE(.8f, .8f);
 			SET_TEXT_COLOUR(255, 100, 100, 255);
 			SET_TEXT_CENTRE(true);
@@ -197,7 +197,7 @@ void Main::MainLoop()
 		if (splashTextTime > 0)
 		{
 			BEGIN_TEXT_COMMAND_DISPLAY_TEXT("STRING");
-			ADD_TEXT_COMPONENT_SUBSTRING_PLAYER_NAME("Chaos Mod v1.8 by pongo1231\n\nSee credits.txt for list of contributors");
+			ADD_TEXT_COMPONENT_SUBSTRING_PLAYER_NAME("Chaos Mod v1.8 por pongo1231\nTraducido por Radeoxx\n\nVer credits.txt para ver los contribuyentes");
 			SET_TEXT_SCALE(.65f, .65f);
 			SET_TEXT_COLOUR(0, 255, 255, 255);
 			SET_TEXT_CENTRE(true);
@@ -209,11 +209,11 @@ void Main::MainLoop()
 		if (m_twitchVoting && m_twitchVoting->IsEnabled() && twitchVotingWarningTextTime > 0)
 		{
 			BEGIN_TEXT_COMMAND_DISPLAY_TEXT("STRING");
-			ADD_TEXT_COMPONENT_SUBSTRING_PLAYER_NAME("Twitch Voting Enabled!");
+			ADD_TEXT_COMPONENT_SUBSTRING_PLAYER_NAME("Votacion De Twitch Activada!");
 			SET_TEXT_SCALE(.8f, .8f);
 			SET_TEXT_COLOUR(255, 100, 100, 255);
 			SET_TEXT_CENTRE(true);
-			END_TEXT_COMMAND_DISPLAY_TEXT(.86f, .7f, 0);
+			END_TEXT_COMMAND_DISPLAY_TEXT(.8f, .7f, 0);
 
 			twitchVotingWarningTextTime -= curTick - lastTick;
 		}

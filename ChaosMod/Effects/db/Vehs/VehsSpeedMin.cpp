@@ -91,15 +91,15 @@ static void OnTick()
 
 		if (m_timeReserve != WAIT_TIME && speedms < minSpeed)
 		{
-			sprintf_s(charBuf, "Minimum: %1.f mph\nDetonation In: %.1fs", MS_TO_MPH(minSpeed), float(m_timeReserve) / 1000);
+			sprintf_s(charBuf, "Minimo: %1.f mph\nDetonacion En: %.1fs", MS_TO_MPH(minSpeed), float(m_timeReserve) / 1000);
 		}
 		else if (m_timeReserve != WAIT_TIME && speedms > minSpeed)
 		{
-			sprintf_s(charBuf, "Minimum: %1.f mph\nDetonation In: %.1fs (Recovering)", MS_TO_MPH(minSpeed), float(m_timeReserve) / 1000);
+			sprintf_s(charBuf, "Minimo: %1.f mph\nDetonacion En: %.1fs (Recargando)", MS_TO_MPH(minSpeed), float(m_timeReserve) / 1000);
 		}
 		else
 		{
-			sprintf_s(charBuf, "Minimum: %1.f mph", MS_TO_MPH(minSpeed));
+			sprintf_s(charBuf, "Minimo: %1.f mph", MS_TO_MPH(minSpeed));
 		}
 		SCALEFORM_MOVIE_METHOD_ADD_PARAM_PLAYER_NAME_STRING(charBuf);
 		SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(overlaycolor);

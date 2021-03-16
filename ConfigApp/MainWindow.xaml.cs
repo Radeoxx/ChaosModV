@@ -36,9 +36,9 @@ namespace ConfigApp
 
             twitch_user_overlay_mode.ItemsSource = new string[]
             {
-                "Chat Messages",
-                "In-Game Overlay",
-                "OBS Overlay"
+                "Mensajes en chat",
+                "Overlay In-Game",
+                "Overlay OBS"
             };
 
             if (!m_initializedTitle)
@@ -76,11 +76,11 @@ namespace ConfigApp
 
                 if (Info.VERSION != newVersion)
                 {
-                    update_available_button.Visibility = Visibility.Visible;
+                    //update_available_button.Visibility = Visibility.Visible;
                 }
                 else
                 {
-                    update_available_label.Content = "You are on the newest version of the mod!";
+                    update_available_label.Content = "¡Estás en la versión más reciente del mod!";
                 }
             }
         }
@@ -269,12 +269,12 @@ namespace ConfigApp
             m_treeMenuItemsMap = new Dictionary<EffectType, TreeMenuItem>();
             m_effectDataMap = new Dictionary<EffectType, EffectData>();
 
-            TreeMenuItem playerParentItem = new TreeMenuItem("Player");
-            TreeMenuItem vehicleParentItem = new TreeMenuItem("Vehicle");
-            TreeMenuItem pedsParentItem = new TreeMenuItem("Peds");
-            TreeMenuItem timeParentItem = new TreeMenuItem("Time");
-            TreeMenuItem weatherParentItem = new TreeMenuItem("Weather");
-            TreeMenuItem miscParentItem = new TreeMenuItem("Misc");
+            TreeMenuItem playerParentItem = new TreeMenuItem("Jugador");
+            TreeMenuItem vehicleParentItem = new TreeMenuItem("Vehiculos");
+            TreeMenuItem pedsParentItem = new TreeMenuItem("NPCs");
+            TreeMenuItem timeParentItem = new TreeMenuItem("Tiempo");
+            TreeMenuItem weatherParentItem = new TreeMenuItem("Clima");
+            TreeMenuItem miscParentItem = new TreeMenuItem("Misceláneo");
 
             SortedDictionary<string, Tuple<EffectType, EffectCategory>> sortedEffects = new SortedDictionary<string, Tuple<EffectType, EffectCategory>>();
 
@@ -398,12 +398,12 @@ namespace ConfigApp
             WriteTwitchFile();
             WriteEffectsFile();
 
-            MessageBox.Show("Saved Config!\nMake sure to press CTRL + L in-game twice if mod is already running to reload the config.", "ChaosModV", MessageBoxButton.OK, MessageBoxImage.Information);
+            MessageBox.Show("Configuración guardada!\nAsegúrate de presionar CTRL + L en el juego dos veces si el mod ya se está ejecutando para volver a cargar la configuración.", "ChaosModV", MessageBoxButton.OK, MessageBoxImage.Information);
         }
 
         private void user_reset_Click(object sender, RoutedEventArgs e)
         {
-            MessageBoxResult result = MessageBox.Show("Are you sure you want to reset your Config?", "ChaosModV",
+            MessageBoxResult result = MessageBox.Show("¿Estás seguro de que quieres restablecer tu configuración?", "ChaosModV",
                 MessageBoxButton.YesNo, MessageBoxImage.Question);
 
             if (result == MessageBoxResult.Yes)
@@ -412,7 +412,7 @@ namespace ConfigApp
 
                 m_effectsFile.ResetFile();
 
-                result = MessageBox.Show("Do you want to reset your Twitch settings too?", "ChaosModV",
+                result = MessageBox.Show("¿Quieres restablecer tu configuración de Twitch también?", "ChaosModV",
                     MessageBoxButton.YesNo, MessageBoxImage.Question);
 
                 if (result == MessageBoxResult.Yes)
@@ -426,7 +426,7 @@ namespace ConfigApp
 
                 Init();
 
-                MessageBox.Show("Config has been set back to default!", "ChaosModV", MessageBoxButton.OK, MessageBoxImage.Information);
+                MessageBox.Show("La configuración se ha restablecido a los valores predeterminados.!", "ChaosModV", MessageBoxButton.OK, MessageBoxImage.Information);
             }
         }
 
@@ -485,6 +485,11 @@ namespace ConfigApp
         private void contribute_donate_click(object sender, RoutedEventArgs e)
         {
             System.Diagnostics.Process.Start("https://paypal.me/EmrCue");
+        }
+
+        private void spanish_github_click(object sender, RoutedEventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://github.com/Radeoxx/ChaosModV");
         }
     }
 }

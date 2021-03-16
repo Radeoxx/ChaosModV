@@ -5,27 +5,27 @@
 #include <stdafx.h>
 
 static std::vector<std::string> actions = {
-	"move forwards",
-	"move backwards",
-	"move left",
-	"move right",
-	"move",
-	"look behind (c)"
+	"mover adelante",
+	"mover atras",
+	"mover izquierda",
+	"mover derecha",
+	"mover",
+	"mirar atras (c)"
 };
 
 static std::map<std::string, std::vector<int>> actionKeys = {
-	{"move forwards", {32, 71, 77, 87, 129, 136, 150, 232}},
-	{"move backwards", {33, 72, 78, 88, 130, 139, 151, 233}},
-	{"move left", {34, 63, 89, 133, 147, 234}},
-	{"move right", {35, 64, 90, 134, 148, 235}},
-	{"move", {
+	{"mover adelante", {32, 71, 77, 87, 129, 136, 150, 232}},
+	{"mover atras", {33, 72, 78, 88, 130, 139, 151, 233}},
+	{"mover izquierda", {34, 63, 89, 133, 147, 234}},
+	{"mover derecha", {35, 64, 90, 134, 148, 235}},
+	{"mover", {
 		32, 71, 77, 87, 129, 136, 150, 232,
 		33, 72, 78, 88, 130, 139, 151, 233,
 		34, 63, 89, 133, 147, 234,
 		35, 64, 90, 134, 148, 235,
 		44, 23, 102, 55,
 	}},
-	{"look behind (c)", {26, 79}}
+	{"mirar atras (c)", {26, 79}}
 };
 
 static int scaleForm = 0;
@@ -42,7 +42,7 @@ static void OnStart()
 	
 	int rand_int = g_random.GetRandomInt(0, 1);
 
-	std::string message = "Simeon Says: ";
+	std::string message = "Simeon Dice: ";
 	
 	if (rand_int == 0)
 	{
@@ -51,7 +51,7 @@ static void OnStart()
 	else
 	{
 		opposite = true;
-		message.append("Don't ");
+		message.append("No ");
 	}
 
 	message.append(action);

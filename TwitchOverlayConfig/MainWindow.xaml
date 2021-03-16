@@ -6,10 +6,14 @@
 		xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
         xmlns:local="clr-namespace:TwitchOverlayConfig"
         mc:Ignorable="d"
-        Title="Twitch Overlay Configuration (by Lennart Oschika/Couch941)" Height="513" Width="1064">
+        Title="Configuración de overlay de Twitch (por Lennart Oschika / Couch941)" Height="513" Width="1064">
     <Grid>
-        <TabControl Background="{x:Null}" BorderBrush="LightGray">
-            <TabItem Header="Global Settings" Background="#FFF0F0F0" BorderBrush="LightGray">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="97*"/>
+            <ColumnDefinition Width="959*"/>
+        </Grid.ColumnDefinitions>
+        <TabControl Background="{x:Null}" BorderBrush="LightGray" Grid.ColumnSpan="2">
+            <TabItem Header="Ajustes Generales" Background="#FFF0F0F0" BorderBrush="LightGray" Margin="-2,-2,0,0">
                 <Grid>
 
                     <Grid.RowDefinitions>
@@ -53,8 +57,8 @@
                     <TextBox  x:Name="overlay_bar_outline_thickness" HorizontalAlignment="Left" Height="23" Margin="950,203,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="90" PreviewTextInput="OnlyNumbersAndPeriodPreviewTextInput" IsEnabled="False"/>
                     <Label Content="Use custom settings for the bars (recommended)" HorizontalAlignment="Left" Margin="720,10,0,0" VerticalAlignment="Top" Height="31" FontSize="13"/>
                     <CheckBox x:Name="custom_bar_settings" HorizontalAlignment="Left" Margin="1011,17,0,0" VerticalAlignment="Top" RenderTransformOrigin="2.812,-1.467" Click="bar_custom_settings_Clicked"/>
-                    <Button x:Name="user_save" Content="Save" HorizontalAlignment="Left" Margin="937,127,0,0" Grid.Row="1" VerticalAlignment="Top" Width="101" Click="user_save_Click" Height="53" />
-                    <Button x:Name="user_reset" Content="Reset" HorizontalAlignment="Left" Margin="836,127,0,0" Grid.Row="1" VerticalAlignment="Top" Width="101" Height="53" Click="user_reset_Click"/>
+                    <Button x:Name="user_save" Content="Guardar" HorizontalAlignment="Left" Margin="937,127,0,0" Grid.Row="1" VerticalAlignment="Top" Width="101" Click="user_save_Click" Height="53" />
+                    <Button x:Name="user_reset" Content="Reiniciar" HorizontalAlignment="Left" Margin="836,127,0,0" Grid.Row="1" VerticalAlignment="Top" Width="101" Height="53" Click="user_reset_Click"/>
                     <Label Content="Bar width (in pixels)" HorizontalAlignment="Left" Margin="372,14,0,0" VerticalAlignment="Top" Grid.Row="1"/>
                     <TextBox x:Name="overlay_bar_width"  HorizontalAlignment="Left" Height="23" Margin="592,17,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="90"
                         PreviewTextInput="OnlyNumbersAndPeriodPreviewTextInput" Grid.Row="1"/>
@@ -63,7 +67,7 @@
 
 
 
-            <TabItem Header="Help/Explanation of the Settings" Background="#FFF0F0F0" BorderBrush="LightGray">
+            <TabItem Header="Ayuda/Explicación de la configuración" Background="#FFF0F0F0" BorderBrush="LightGray" Margin="0,-2,-2,0">
                 <Grid>
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="13*"/>
