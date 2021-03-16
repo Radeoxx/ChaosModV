@@ -74,8 +74,8 @@ namespace ConfigApp
             }
             catch (UnauthorizedAccessException)
             {
-                MessageBox.Show("No permissions to write in the current directory. Try either running the program as admin or allowing write access to the current directory.",
-                    "No Write Access", MessageBoxButton.OK, MessageBoxImage.Error);
+                MessageBox.Show("No hay permisos para escribir en el directorio actual. Intente ejecutar el programa como administrador o permitir el acceso de escritura al directorio actual.",
+                    "Sin acceso de escritura", MessageBoxButton.OK, MessageBoxImage.Error);
 
                 Application.Current.Shutdown();
             }
@@ -300,7 +300,6 @@ namespace ConfigApp
             TreeMenuItem timeParentItem = new TreeMenuItem("Tiempo");
             TreeMenuItem weatherParentItem = new TreeMenuItem("Clima");
             TreeMenuItem miscParentItem = new TreeMenuItem("Misceláneo");
-            TreeMenuItem playerParentItem = new TreeMenuItem("Player");
             TreeMenuItem metaParentItem = new TreeMenuItem("Meta");
 
             SortedDictionary<string, Tuple<EffectType, EffectCategory>> sortedEffects = new SortedDictionary<string, Tuple<EffectType, EffectCategory>>();

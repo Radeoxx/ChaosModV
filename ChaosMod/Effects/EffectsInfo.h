@@ -304,10 +304,6 @@ const std::unordered_map<EffectType, EffectInfo> g_effectsMap =
 	{EFFECT_IGNITE, {"Prender Fuego Al Jugador", "player_ignite", false, {EFFECT_PLAYER_INVINCIBLE}}},
 	{EFFECT_ANGRY_JESUS, {"Spawn Jesucristo Campero", "spawn_grieferjesus"}},
 	{EFFECT_SPAWN_IMPOTENTRAGE, {"Spawn Impotent Rage", "peds_spawnimrage"}},
-
-
-
-
 	{EFFECT_ANGRY_JESUS2, {"Spawn Jesucristo Campero Extremo", "spawn_grieferjesus2"}},
 	{EFFECT_IGNITE_PEDS, {"Prender Fuego A Los Personajes Cercanos", "peds_ignite"}},
 	{EFFECT_EXPLODE_VEHS, {"Reventar Vehiculos Cercanos", "vehs_explode"}},
@@ -338,7 +334,7 @@ const std::unordered_map<EffectType, EffectInfo> g_effectsMap =
 	{EFFECT_PEDS_EXIT_VEH, {"Todos Salen De Sus Vehiculos", "playerveh_exit"}},
 	{EFFECT_GAMESPEED_X02, {"Velocidad De Juego x0.2", "time_x02", true, { EFFECT_GAMESPEED_X05, EFFECT_GAMESPEED_LAG, EFFECT_PLAYER_DEAD_EYE }, true}},
 	{EFFECT_GAMESPEED_X05, {"Velocidad De Juego x0.5", "time_x05", true, { EFFECT_GAMESPEED_X02, EFFECT_GAMESPEED_LAG, EFFECT_PLAYER_DEAD_EYE }, true}},
-	{EFFECT_PLAYER_DEAD_EYE, {"Ojo Muerto", "player_dead_eye", true, { EFFECT_GAMESPEED_X05, EFFECT_GAMESPEED_X02, EFFECT_GAMESPEED_LAG }}},
+	{EFFECT_PLAYER_DEAD_EYE, {"Ojo Tuerto", "player_dead_eye", true, { EFFECT_GAMESPEED_X05, EFFECT_GAMESPEED_X02, EFFECT_GAMESPEED_LAG }}},
 	{EFFECT_GAMESPEED_LAG, {"Lag", "time_lag", true, {}, true}},
 	{EFFECT_PEDS_RIOT, {"Modo Disturbios", "peds_riot", true, { EFFECT_PEDS_COPS }}},
 	{EFFECT_RED_VEHS, {"Trafico Rojo", "vehs_red", true, { EFFECT_BLUE_VEHS, EFFECT_GREEN_VEHS, EFFECT_RAINBOW_VEHS, EFFECT_VEHS_INVISIBLE, EFFECT_PINK_VEHS }}},
@@ -362,9 +358,6 @@ const std::unordered_map<EffectType, EffectInfo> g_effectsMap =
 	{EFFECT_SPAWN_TUG, {"Spawn Barco De Pesca", "spawn_tug"}},
 	{EFFECT_SPAWN_CARGO, {"Spawn Avion De Carga", "spawn_cargo"}},
 	{EFFECT_SPAWN_BUS, {"Spawn Bus", "spawn_bus"}},
-
-
-
 	{EFFECT_SPAWN_BLIMP, {"Spawn Zepelin", "spawn_blimp"}},
 	{EFFECT_SPAWN_BUZZARD, {"Spawn Helicoptero De Combate", "spawn_buzzard"}},
 	{EFFECT_SPAWN_FAGGIO, {"Spawn Motillo", "spawn_faggio"}},
@@ -551,7 +544,7 @@ const std::unordered_map<EffectType, EffectInfo> g_effectsMap =
 	{EFFECT_PLAYER_BEES, {"ABEJAS!", "player_bees", true, { EFFECT_PEDS_OHKO }}},
 	{EFFECT_PLAYER_VR, {"Modo VR", "player_vr", true, {}, true}},
 	{EFFECT_MISC_PORTRAIT_MODE, {"Modo Retrato", "misc_portrait", true}},
-	{EFFECT_HIGH_PITCH, {"Te Me Bajas 2 Tonitos, nota", "misc_highpitch", true, { EFFECT_GAMESPEED_X02, EFFECT_GAMESPEED_X05 }}},
+	{EFFECT_HIGH_PITCH, {"Te Me Bajas 2 Tonitos, Nota", "misc_highpitch", true, { EFFECT_GAMESPEED_X02, EFFECT_GAMESPEED_X05 }}},
 	{EFFECT_NO_SKY, {"Sin Cielo", "misc_nosky", true}},
 	{EFFECT_PLAYER_GTA_2, {"GTA 2", "player_gta_2", true, { EFFECT_PLAYER_QUAKE_FOV, EFFECT_FLIP_CAMERA }, true}},
 	{EFFECT_PEDS_KIFFLOM, {"Kifflom!", "peds_kifflom", true}},
