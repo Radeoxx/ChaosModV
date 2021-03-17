@@ -1,49 +1,49 @@
 # Chaos Mod V
 
-A replica of the chaos mods found on previous GTA games for GTA V.
+Una réplica de los chaos mods que se encuentran en juegos de GTA anteriores para GTA V.
 
-See the [GTA5-Mods mod page](https://www.gta5-mods.com/scripts/chaos-mod-v-beta) for more information and instructions on how to install it.
+Visita la [página del mod [GTA5-Mods]](https://www.gta5-mods.com/scripts/chaos-mod-v-beta) para obtener más información e instrucciones sobre cómo instalarlo.
 
-Feel free to join the Discord Server for community support or simply to stay up to date on this (and other) mods.
+Siéntase libre de unirse al servidor de Discord para obtener soporte de la comunidad o simplemente para mantenerse actualizado sobre este (y otros) mods.
 
-Also make sure to check the [Wiki](https://github.com/gta-chaos-mod/ChaosModV/wiki)!
+También asegúrese de comprobar la [Wiki en español](https://github.com/Radeoxx/ChaosModV/wiki) o la [Wiki original](https://github.com/gta-chaos-mod/ChaosModV/wiki)!
 
 [![](https://discord.com/api/guilds/785656433529716757/widget.png)](https://discord.gg/w2tDeKVaF9)
 
-## Building
+## Compilacion
 
-1. Clone the repo `git clone https://github.com/gta-chaos-mod/ChaosModV.git`
+1. Clonar el repositorio `git clone https://github.com/gta-chaos-mod/ChaosModV.git`
 
 2. `cd ChaosModV`
 
-3. Initialize all submodules
+3. Inicializar todos los submódulos
 
 ```
 git submodule init
 git submodule update --recursive
 ```
 
-4. Open `vendor/minhook/build/VC15/MinHookVC15.sln` in Visual Studio
+4. Abrir `vendor/minhook/build/VC15/MinHookVC15.sln` en Visual Studio
 
-5. Compile libMinHook as x64 Release build
+5. Compile libMinHook como Release x64
 
-6. Open `ChaosMod.sln` in the root folder in Visual Studio
+6. Abra `ChaosMod.sln` en la carpeta raíz con Visual Studio
 
-7. Compiling should work now. If there's an error referencing `MsBuildMajorVersion` when building either the ConfigApp or TwitchChatProxy projects, close and open Visual Studio again.
+7. La compilación debería funcionar ahora. Si hay un error al hacer referencia a `MsBuildMajorVersion` al compilar los proyectos ConfigApp o TwitchChatProxy, cierre y abra Visual Studio nuevamente.
 
-## Adding new effects
+## Añadiendo nuevos efectos
 
-1. Add your new effect info to `ChaosMod/Effects/EffectsInfo.h`
+1. Agregue su nueva información de efecto a `ChaosMod/Effects/EffectsInfo.h`
 
-2. Add the same info to `ConfigApp/Effects.cs`
+2. Agregue la misma información a `ConfigApp/Effects.cs`
 
-3. Create a new .cpp file in the appropriate folder under `ChaosMod/Effects/db/` with a fitting name
+3. Cree un nuevo archivo .cpp en la carpeta apropiada bajo `ChaosMod/Effects/db/` con un nombre apropiado
 
-Layout of the file should look like this:
+El diseño del archivo debería ser así:
 
 ```cpp
 /*
-	Effect by <Your Name>
+	Effect by <Tu Nombre>
 */
 
 #include <stdafx.h>
@@ -66,4 +66,4 @@ static void OnTick()
 static RegisterEffect registerEffect(EFFECT_ENUM_ENTRY, OnStart, OnStop, OnTick);
 ```
 
-Any of these functions can be omitted and either replaced with a `nullptr` or completely left out (default parameter values) in the `RegisterEffect` declaration.
+Cualquiera de estas funciones puede omitirse y reemplazarse con un "nullptr" o dejarse completamente fuera (valores de parámetro predeterminados) en la declaración "RegisterEffect".
